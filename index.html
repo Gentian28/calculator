@@ -12,10 +12,16 @@
 
 <body>
     <div id="calculatorApp">
+        <div id="results">
+            <div>
+                <div id="enteredValue"></div>
+            </div>
+            <div id="resultContainer"></div>
+        </div>
         <ul id="calculatorNumbers">
             <li class="orange" id="clear"><button type="button">c</button></li>
-            <li class="orange"><button type="button">other</button></liclass="orange">
-            <li class="orange"><button type="button">other</button></li>
+            <li class="orange"><button type="button" disabled></button></liclass="orange">
+            <li class="orange"><button type="button" disabled></button></li>
             <li class="operator orange" id="divide"><button type="button">÷</button></li>
             <li class="number" id="7"><button type="button">7</button></li>
             <li class="number" id="8"><button type="button">8</button></li>
@@ -29,14 +35,11 @@
             <li class="number" id="2"><button type="button">2</button></li>
             <li class="number" id="3"><button type="button">3</button></li>
             <li class="operator orange" id="add"><button type="button">+</button></li>
-            <li><button type="button">q</button></li>
+            <li><button type="button" disabled></button></li>
             <li class="number" id="0"><button type="button">0</button></li>
             <li class="number" id="."><button type="button">.</button></li>
             <li id="evaluateExpression"><button type="button">=</button></li>
         </ul>
-
-        <div id="enteredValue"></div>
-        <div id="resultContainer"></div>
     </div>
 </body>
 

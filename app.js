@@ -9,6 +9,9 @@ let typedValues = '';
 
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].onclick = function () {
+        if (res > 0 && !items.length) {
+            clear.click();
+        }
         value += this.id;
         typedValues += this.innerText;
         enteredValue.innerHTML = typedValues;
@@ -19,6 +22,15 @@ for (let i = 0; i < operators.length; i++) {
     operators[i].onclick = function () {
         if (value.length && items.length < 2) {
             items.push(Number(value));
+            value = '';
+            items.push(this.id);
+            console.log(items);
+            typedValues += this.innerText;
+            enteredValue.innerHTML = typedValues;
+            console.log(value.length)
+        }
+        if (!value.length && res > 0 && items.length < 2) {
+            items.push(Number(res));
             value = '';
             items.push(this.id);
             console.log(items);
