@@ -24,11 +24,32 @@ li {
 #calculatorNumbers button {
     width: 100%;
     height: 60px;
+    color: #ffffff;
+    font-size: 28px;
+    background: #000000;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+}
+#calculatorNumbers .orange button {
+    color: #F68839;
 }
 #calculatorNumbers li {
     width: calc(100% / 4);
 }
-
+#evaluateExpression {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#evaluateExpression button {
+    border-radius: 50%;
+    background: #F68839;
+    height: 75%;
+    width: 75%;
+}
 #enteredValue {
     color: #ffffff;
 }

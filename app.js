@@ -15,7 +15,6 @@ for (let i = 0; i < numbers.length; i++) {
     }
 }
 
-
 for (let i = 0; i < operators.length; i++) {
     operators[i].onclick = function () {
         if (value.length && items.length < 2) {
@@ -25,8 +24,12 @@ for (let i = 0; i < operators.length; i++) {
             console.log(items);
             typedValues += this.innerText;
             enteredValue.innerHTML = typedValues;
-        } else {
+            console.log(value.length)
+        }
+        if (value.length) {
             evaluateExpression.click();
+            typedValues += this.innerText;
+            enteredValue.innerHTML = typedValues;
             items.push(res);
             items.push(this.id);
             console.log(res);
@@ -70,21 +73,6 @@ const divide = function (a, b) {
     return a / b;
 }
 
-const calculate = function (operator) {
-    if (operator === 'subtract') {
-        return subtract;
-    }
-    if (operator === 'add') {
-        return add;
-    }
-    if (operator === 'multiply') {
-        return multiply;
-    }
-    if (operator === 'divide') {
-        return divide;
-    }
-}
-
 const opreatorFunctions = {
     subtract,
     add,
@@ -97,4 +85,7 @@ clear.onclick = function () {
     items.length = 0;
     results.length = 0;
     res = 0;
+    typedValues = '';
+    enteredValue.innerHTML = typedValues;
+    resultContainer.innerHTML = '';
 }
